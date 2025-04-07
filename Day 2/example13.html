@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            form{
+            border: 2px solid black;
+            text-align: center;
+            width: fit-content;
+           margin: auto;
+           padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <p>Name: <input type="text" name="name"></p>
+            <p>User ID: <input type="text" name="id"></p>
+            <p>Password: <input type="password" name="password"></p>
+            <p>Gender: <input type="radio" name="Gender">Male<input type="radio" name="Gender">Female </p>
+            <p>Is Manager: <input type="checkbox"></p>
+            <p>Department: 
+                <select name="dept">
+                    <option>CS</option>
+                    <option>AIML</option>
+                    <option>EC</option>
+                </select>
+            </p>
+            <p>Address:<textarea name="address"></textarea></p>
+            <p>Document: <input type="file"></p> 
+            <input type="submit" value="Submit"> <input type="reset" value="Reset"> <input type="submit" value="Validate">
+            
+        </form>
+    </body>
+</html>

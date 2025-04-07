@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+                border: 2px solid black;
+                text-align: center;
+                width: fit-content;
+               margin: auto;
+               padding: 20px;
+            }
+            p{
+                margin: 0;
+                display: inline;
+            }
+    </style>
+</head>
+<body>
+        
+        <form action="per-edu details.html" onsubmit="call()">
+            <h2>Academic Data</h2>
+           <p>QUALIFICATION</p>
+           <select name="education" id="edu">
+            <option>BCOM</option>
+            <option>BE</option>
+            <option>BSC</option>
+           </select>
+           <input type="submit" value="SUUBMIT" id="data1" name="data1"> 
+        </form> 
+        <script>
+            function call(){
+                var edu = document.getElementById('edu').value;
+                sessionStorage .setItem('edu',edu);
+            }
+        </script>
+            
+</body>
+</html>

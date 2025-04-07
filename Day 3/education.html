@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+                border: 2px solid black;
+                text-align: center;
+                width: fit-content;
+               margin: auto;
+               padding: 20px;
+            }
+    </style>
+</head>
+<body>
+            <form action="academic.html" onsubmit="call()">
+                <h2>Personal Data</h2>
+                <p>NAME: <input type="text" id="name" name="name"></p>
+                <p>AGE: <input type="text" id="age" name="age"></p>
+                <p>DOB: <input type="text" id="dob" name="dob"></p>
+                <p>EMAIL: <input type="text" id="mail" name="mail"></p>
+                <input type="submit" value="NEXT" id="data" name="data"> 
+            </form>
+            <script>
+                function call(){
+                    var name = document.getElementById('name').value;
+                    sessionStorage .setItem('name',name);
+                    var age = document.getElementById('age').value;
+                    sessionStorage .setItem('age',age);
+                    var dob = document.getElementById('dob').value;
+                    sessionStorage .setItem('dob',dob);
+                    var mail = document.getElementById('mail').value;
+                    sessionStorage .setItem('mail',mail);
+                }
+            </script>
+</body>
+</html>

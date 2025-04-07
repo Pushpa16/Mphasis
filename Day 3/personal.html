@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+                border: 2px solid black;
+                text-align: center;
+                width: fit-content;
+               margin: auto;
+               padding: 20px;
+            }
+    </style>
+</head>
+<body>
+            <form action="page2.html" onsubmit="call()">
+                <h2>Personal Data</h2>
+                <p>Name: <input type="text" id="name" name="name"></p>
+                <p>Age: <input type="text" id="age" name="age"></p>
+                <p>Salary: <input type="text" id="sal" name="sal"></p>
+                <input type="submit" value="SHOW DATA" id="data" name="data"> 
+            </form>
+            <script>
+                function call(){
+                    var name = document.getElementById('name').value;
+                    sessionStorage .setItem('name',name);
+                    var age = document.getElementById('age').value;
+                    sessionStorage .setItem('age',age);
+                    var salary = document.getElementById('sal').value;
+                    sessionStorage .setItem('sal',salary);
+                }
+            </script>
+</body>
+</html>

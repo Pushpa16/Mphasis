@@ -1,0 +1,33 @@
+<html>
+    <head>
+       
+    </head>
+    <body>
+        <form>
+            <p>Customer:
+                <select name="customer" id="Customer">
+                    <option>Jack</option>
+                    <option>Queen</option>
+                    <option>Joker</option>
+                </select> 
+            </p>
+            <p>Product:
+                <select name="product" id="Product">
+                    <option>200</option>
+                    <option>201</option>
+                    <option>202</option>
+                </select> 
+            </p>
+            <p>Rating:
+                <select name="rating" id="Rating">
+                    <option>5</option>
+                    <option>4</option>
+                    <option>3</option>
+                </select> 
+            </p>
+            <input type="button" value="Submit" onclick="javascript:alert('Customer '+document.getElementById('Customer').value +'\nProduct '+ document.getElementById('Product').value + '\nRating '+document.getElementById('Rating').value )">
+            
+        </form>
+    </body>
+</html>
+

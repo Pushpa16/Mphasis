@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+                border: 2px solid black;
+                text-align: center;
+                width: fit-content;
+               margin: auto;
+               padding: 20px;
+            }
+            p{
+                margin: 0;
+                display: inline;
+            }
+    </style>
+</head>
+<body>
+        
+        <form action="quesansres.html"  onsubmit="call()">
+            <h2>Question 2: What is 4*7?</h2>
+            <select name="answer"  id="ans1" required>
+                <option value="52">52</option>
+                <option value="35" >35</option>
+                <option value="28" >28</option>
+            </select>
+            <input type="submit" value="Submit">
+            
+        </form> 
+        <script>
+            function call(){
+                var ans1 = document.getElementById('ans1').value;
+                if(ans1==28)
+              {
+                var final1="True";
+                sessionStorage .setItem('ans1',final1);
+              }
+              else{
+                var final1="False";
+                sessionStorage .setItem('ans1',final1);
+              }
+            }
+        </script>
+            
+</body>
+</html>

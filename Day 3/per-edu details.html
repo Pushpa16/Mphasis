@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+                border: 2px solid black;
+                text-align: center;
+                width: fit-content;
+               margin: auto;
+               padding: 20px;
+            }
+            
+    </style>
+</head>
+<body>
+        
+        <form>
+            <h2>Personal Data</h2>
+          <p id="first"></p>
+            <p id="second"></p>
+            <p id="third"></p> 
+           <p id="fourth"></p> 
+           <p id="fifth"></p> 
+            
+        </form> 
+    <script>
+        window.onload = function() {
+            document.getElementById('first').textContent ='Name: '+ sessionStorage .getItem('name');
+            document.getElementById('second').textContent = 'Age: '+ sessionStorage .getItem('age');
+            document.getElementById('third').textContent = 'Dob: '+sessionStorage .getItem('dob'); 
+            document.getElementById('fourth').textContent = 'Email: '+sessionStorage .getItem('mail');    
+            document.getElementById('fifth').textContent = 'Education: '+sessionStorage .getItem('edu');
+
+        };
+    </script>
+            
+</body>
+</html>

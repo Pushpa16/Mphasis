@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+                border: 2px solid black;
+                text-align: center;
+                width: fit-content;
+               margin: auto;
+               padding: 20px;
+            }
+            p{
+                margin: 0;
+                display: inline;
+            }
+    </style>
+</head>
+<body>
+        
+        <form>
+            <h2>Personal Data</h2>
+            <p>Name:</p><p id="first"></p>
+            <p>Age:</p><p id="second"></p>
+            <p>Salary:</p><p id="third"></p> 
+        </form> 
+    <script>
+        window.onload = function() {
+            document.getElementById('first').textContent = sessionStorage .getItem('name');
+            document.getElementById('second').textContent = sessionStorage .getItem('age');
+            document.getElementById('third').textContent = sessionStorage .getItem('sal');     
+           
+
+        };
+    </script>
+            
+</body>
+</html>

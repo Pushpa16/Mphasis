@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+                border: 2px solid black;
+                text-align: center;
+                width: fit-content;
+               margin: auto;
+               padding: 20px;
+               font-family: cursive;
+            }
+           
+            #in{
+                display: inline; margin: 0;
+            }
+            #out
+            {
+                display: inline; margin: 0;
+
+            }
+    </style>
+</head>
+<body>
+        
+        <form action="#" id="for">
+            <h2>PRODUCT</h2>
+            <p>Quantity: <input type="number" id="quan"></p>
+            <p>Price <input type="number" id="pri"></p>
+            <input type="button" value="CALCULATE" onclick="call()"><br>
+            <p id="in"> Output:</p><p  id="out"></p>
+            
+        </form> 
+        <script>
+            function call(){
+                var quantity = document.getElementById('quan').value;  
+                var price = document.getElementById('pri').value;
+                var output= quantity*price;
+                document.getElementById('out').textContent = output;
+               
+            }
+        </script>
+            
+</body>
+</html>

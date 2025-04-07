@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+                border: 2px solid black;
+                text-align: center;
+                width: fit-content;
+               margin: auto;
+               padding: 20px;
+            }
+            p{
+                margin: 0;
+                display: inline;
+            }
+    </style>
+</head>
+<body>
+        
+        <form action="quesans2.html" onsubmit="call()">
+            <h2>Question 1: What is 3+2?</h2>
+            <select name="answer" id="ans"  required>
+                <option value="6" >6</option>
+                <option value="5" >5</option>
+                <option value="3" >3</option>
+            </select>
+            <input type="submit" value="Next">
+            
+        </form> 
+        <script>
+            function call(){
+                var ans = document.getElementById('ans').value;
+                if(ans==5)
+              {
+                var final="True";
+                sessionStorage .setItem('ans',final);
+              }
+              else{
+                var final="False";
+                sessionStorage .setItem('ans',final);
+              }
+            }
+        </script>
+            
+</body>
+</html>

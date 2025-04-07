@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>FORM</title>
+        
+        <style>
+            form{
+            border: 2px solid black;
+            text-align: center;
+            width: fit-content;
+           margin: auto;
+           padding: 20px;
+        }
+        </style>
+    </head>
+    <body>
+        <marquee behavior="scrolling" direction="right">This is a IT Helpdesk Request!</marquee>
+        <form>
+            <h3>IT Helpdesk Request</h3>
+            <p>Issue Type:
+                <select name="issue">
+                    <option>Software</option>
+                    <option>System</option>
+                    <option>Network</option>
+                </select>
+            </p>
+            <p>Description<br>
+                <textarea name="desc" rows="5" cols="40"></textarea>
+            </p>
+            <input type="submit" value="Submit Ticket">
+        </form>
+    </body>
+</html>
+
+
+
+
+

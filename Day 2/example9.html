@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>FORM</title>
+        <style>
+            form{
+                border: 2px solid black;
+                text-align: center;
+                width: fit-content;
+               margin: auto;
+               padding: 20px;
+            }
+            body{
+                padding: 10%;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <h3>Leave Application</h3>
+            <p>Employee Id: <input type="text" name="emp_id"></p>
+            <p>Leave type:
+                <select name="leave_type">
+                    <option value="causal">Casual</option>
+                    <option value="Sick">sick</option>
+                    <option value="annual">Annual</option>
+                </select>
+            </p>
+            <p>Start Date:
+                <input type="text" name="start_date">
+            </p>
+            <p>End Date:
+                <input type="text" name="end_date">
+            </p>
+            <p>
+                <input type="submit" value="Apply">
+            </p>
+        </form>
+    </body>
+</html>
