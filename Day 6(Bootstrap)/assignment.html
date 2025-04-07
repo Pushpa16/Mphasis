@@ -9,47 +9,50 @@
     
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <i class="fa-solid fa-file"></i>
-                    <p>MPHASIS</p>
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active"><a class="nav-link" href="#">HOME</a></li>
-                        <li class="nav-item "><a class="nav-link" href="#">ABOUT</a></li>
-                        <li class="nav-item "><a class="nav-link" href="#">CONTACT</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <table class="table-bordered">
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                  </tr>
-            </table>
+    <div class="container bg-info">
+        <div class="d-flex justify-content-between  p-2">
+            <i class="fa fa-graduation-cap" style="font-size:36px"></i>
+            <h3>Mphasis</h3>
+            <ul class="list-group d-flex flex-row ">
+                <li class="list-group-item bg-secondary">About</li>
+                <li class="list-group-item bg-secondary">Home</li>
+                <li class="list-group-item bg-secondary">Contact</li>
+              </ul>
         </div>
-        <div class="row2">
-            
+        <div class="row2 d-flex justify-content-between p-2">
+            <ul class="list-group d-flex flex-row ">
+                <li class="list-group-item bg-secondary">Customer</li>
+                <li class="list-group-item bg-secondary">Product</li>
+                <li class="list-group-item bg-secondary">Order</li>
+              </ul>
+              <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown">More course</button>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Python</a>
+                  <a class="dropdown-item" href="#">Data Science</a>
+                  <a class="dropdown-item" href="#">AIML</a>
+              </div>
+        </div> 
+        <div class="row3 ">
+            <ol class="breadcrumb w-auto p-2">
+                <li class="breadcrumb-item ">Home</li>
+                <li class="breadcrumb-item ">About</li>
+                <li class="breadcrumb-item ">Contact</li>
+            </ol>
         </div>
+        <div class="d-flex justify-content-center p-2">
+            <div class="border p-4 rounded shadow">
+                <h4 class="text-center">Add New</h4>
+                <form class="form ">
+                    <p>Name: <input type="text" name="name"></p>
+                    <p>Age: <input type="text" name="name"></p>
+                    <button class="btn btn-success " type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        
         
     </div>
 
-   
-    
-    <!-- <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#">CUSTOMER</a></li>
-                    <li class="nav-item "><a class="nav-link" href="#">PRODUCT</a></li>
-                    <li class="nav-item "><a class="nav-link" href="#">ORDER</a></li>
-                </ul>
-            </div>
-        </nav>
-        
-    </div> -->
 
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
