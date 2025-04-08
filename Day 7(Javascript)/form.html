@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateForm() {
+          var name=document.getElementById('name').value;
+          var age=document.getElementById('age').value;
+          var email=document.getElementById('email').value;
+          var desp=document.getElementById('Description').value;
+          if(age=="" || name=="" || email=="" || desp=="")
+          {
+            alert("Please fill the above details")
+          }
+          if(isNaN(age))
+          {
+            alert('Age must be number');
+          }
+          var emailpattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!emailpattern.test(email))
+            {
+                alert("Invalid email format")
+            }
+          }
+          
+        
+        </script>
+</head>
+<body>
+    <form action="#" onsubmit="validateForm();">
+        <h4>Patient Registration Form</h4>
+        <p>Name:<input type="text " id="name"></p>
+        <p>Age:<input type="text" id="age"></p>
+        <p>Email:<input type="text" id="email"></p>
+        <p>Description:<textarea id="Description"></textarea></p>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #for{
+            display: none;
+        }
+    </style>
+    <script>
+        function check(){
+            var rn=parseFloat(document.getElementById('rn').value);
+            if(rn%2==0)
+            {
+                document.getElementById("check").innerHTML='Room Available';
+                const day=1000*3600*24;
+                var checkin=document.getElementById('in').value;
+            var checkout=document.getElementById('out').value;
+            var night=Math.round(Math.abs((new Date(checkin)-new Date(checkout))/day));
+            sessionStorage .setItem('nights',night);
+            document.getElementById("nights").innerHTML=night;
+            document.getElementById("for").style.display='block';
+            }
+            else{
+                document.getElementById("check").innerHTML='Room Unavailable';
+            }
+        }
+        function calculate(){
+           
+            let q=500,k=750,s=1200;
+            
+            var room=document.getElementById('room').value;
+            var days=sessionStorage .getItem('nights');
+            if(room=='King Room'){
+                var amt=750*days;
+                document.getElementById("amount").innerHTML=amt;
+            }
+            if(room=='Queen Room'){
+                var amt=500*days;
+                document.getElementById("amount").innerHTML=amt;
+            }
+            if(room=='Suite Room'){
+                var amt=1200*days;
+                document.getElementById("amount").innerHTML=amt;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <h4>Guest Details</h4>
+        <p>Name:<input type="text" id="name"></p>
+        <p>Check-in:<input type="date" id="in"></p>
+        <p>Check-out:<input type="date" id="out"></p>
+    </form>
+    <form action="#">
+        <h4>Check Room Availability</h4>
+        <p>Room number:<input type="number" id="rn"></p>
+        <input type="button" value="Check"  onclick="check()">
+        <p id="check"></p>
+    </form>
+    <form action="#" id="for">
+        <p>Room type:
+            <select name="leave_type" id="room">
+                <option id="r1">Queen Room</option>
+                <option id="r2">King Room</option>
+                <option id="r3">Suite Room</option>
+            </select>
+        </p>
+        <p>Number of Nights:<span id="nights"></span></p>
+        <input type="button" value="Calculate" onclick="calculate()">
+        <p>Total amount:<span id="amount"></span></p>
+    </form>
+</body>
+</html>

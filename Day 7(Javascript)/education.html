@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate() {
+          var avg=((parseFloat(document.getElementById('num1').value)+parseFloat(document.getElementById('num2').value)+parseFloat(document.getElementById('num3').value))/3);
+          alert("Average:"+ avg);
+          if(avg>=3)
+          { 
+            alert("Congratualations you have passed");
+          }
+          else{
+            alert("Better luck next time");
+          }
+          }
+    </script>
+</head>
+<body>
+    <form action="#" onsubmit="calculate();">
+        <p>Maths:<input type="number" id="num1"></p>
+        <p>Science:<input type="number" id="num2"></p>
+        <p>Hindi:<input type="number" id="num3"></p>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Generate(){
+        var basic=parseFloat(document.getElementById('basic').value);
+        let hra=(30*basic)/100;
+        document.getElementById("hra").innerHTML = hra;
+        let med=(10*basic)/100;
+        document.getElementById("med").innerHTML = med;
+        let travel=(5*basic)/100;
+        document.getElementById("travel").innerHTML = travel;
+        let tds=(5*basic)/100;
+        document.getElementById("tds").innerHTML = tds;
+        let sal=basic+hra+med+travel-tds;
+        document.getElementById("sal").innerHTML=sal;
+        }     
+    </script>
+
+</head>
+<body>
+    <form action="#" onsubmit="Generate(); return false;">
+        <h3>Enter Basic Salary</h3>
+        <input type="number" id="basic">
+        <input type="submit" value="Generate">
+    </form>
+    <form>
+        <p>HRA: <span id="hra"></span></p>
+        <p>Medical: <span id="med"></span></p>
+        <p>Travel: <span id="travel"></span></p>
+        <p>TDS: <span id="tds"></span></p>
+        <p>Total Salary:<span id="sal"></span></p>
+    </form>
+</body>
+</html>

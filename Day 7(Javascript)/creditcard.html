@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateForm()
+        {
+            var cc=document.getElementById("num").value;
+            
+            let lastFourDigits = cc.split('').slice(-4).join('');
+            
+            if(cc.length<12)
+            {
+                alert("Invalid Credit card number");
+            }
+            else{
+                document.getElementById("res").innerHTML="************"+lastFourDigits;
+            }
+      }
+      function getoriginal(){
+        var cc=document.getElementById("num").value;
+        document.getElementById("res").innerHTML=cc;
+      }
+        
+    </script>
+</head>
+<body>
+    <form>
+        <h2>Enter Credit Card Details</h2>
+        <input type="number" id="num">
+        <input type="button" value="submit" onclick="validateForm();">
+    </form>
+    <form>
+        <p id="res"></p>
+        <input type="button" value="Get original" onclick="getoriginal();">
+    </form>
+    <form>
+        <p id="res"></p>
+    </form>
+</body>
+</html>
