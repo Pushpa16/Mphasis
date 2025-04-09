@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display()
+        {
+            var name=document.getElementById('name').value;
+            var age=document.getElementById('age').value;
+            var dob=document.getElementById('dob').value;
+            var mob=document.getElementById('mob').value;
+            var checkBox = document.getElementById('check');
+            if(checkBox.checked==true)
+            {
+                checkBox="yes";
+            }
+            else{
+                checkBox="No";
+            }
+            var myCust=new Customer(name,age,dob,mob,checkBox);
+
+            document.write("Name is: "+myCust.name+"<br>");
+            document.write("Age is: "+myCust.age+"<br>");
+            document.write("Dob is: "+myCust.dob+"<br>");
+            document.write("mob is: "+myCust.mob+"<br>");
+            document.write("Local customer: "+myCust.checkBox+"<br>");
+        }
+        
+        class Customer{
+            constructor(name,age,dob,mob,checkBox){
+            this.name=name;
+            this.age=age;
+            this.dob=dob;
+            this.mob=mob;
+            this.checkBox=checkBox;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h4>Customer</h4>
+    <form >
+        <p>Name: <input type="text" id="name"></p>
+        <p>Age: <input type="number" id="age"></p>
+        <p>Dob: <input type="date" id="dob"></p>
+        <p>Mobile: <input type="number" id="mob"></p>
+        <p><input type="checkbox" id="check"> Local Currency</p>
+        <input type="button" value="ADD" id="add" onclick="display()">
+       
+    </form>
+</body>
+</html>

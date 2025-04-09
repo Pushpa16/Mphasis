@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function readCookie()
+        {
+           var allcookies=document.cookie;
+           document.write("All cookies: "+ allcookies);
+           cookiearray=allcookies.split(";"); //get all thecookies pair in an array
+           for(var i=0;i<cookiearray.length;i++) //now take key value out of this array
+           {
+            name=cookiearray[i].split("=")[0];
+            value=cookiearray[i].split("=")[1];
+            document.write("Key is: "+ name+ " and Value is: "+ value);
+           }
+        }
+    </script>
+</head>
+<body>
+    <form action="#" name="myForm">
+        <p>Click the following button and see the result</p>
+        <input type="button" value="Get Cookie" onclick="readCookie()">
+    </form>
+</body>
+</html>

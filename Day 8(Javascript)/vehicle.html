@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display()
+        {
+            var vendor=document.getElementById('vendor').value;
+            var speed=document.getElementById('speed').value;
+            var path=document.getElementById('path').value;
+            var type=document.getElementById('type').value;
+            var myTransport=new transport(vendor,speed,path);
+            document.write("Vendor: "+myTransport.vendor+"<br>");
+            document.write("Speed: "+myTransport.speed+"<br>");
+            document.write("Path: "+myTransport.path+"<br>");
+            
+            if(type=='Flights')
+            {
+                const myFlights= new Flights();
+                document.getElementById("weights").innerHTML="Weight: "+myFlights.weight+"<br>"
+            }
+            
+        }
+        class transport
+        {
+            constructor(vendor,speed,path){
+                this.vendor=vendor;
+                this.speed=speed;
+                this.path=path;
+            }
+        }
+        class Flights extends transport{
+            constructor(weight)
+            {
+                this.weight=40;
+            }
+        }
+        class Truck extends transport{
+            constructor(capacity)
+            {
+                this.capacity=capacity;
+            }
+        }
+        class train extends transport{
+            constructor(coaches)
+            {
+                this.coaches=coaches;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Booking Form</h2>
+    <p>Vendor: <input type="text" id=vendor></p>
+    <p>Speed: <input type="text" id=speed></p>
+    <p>Path: <input type="text" id=path></p>
+    <p>Type:
+        <select id="type">
+            <option>Flights</option>
+            <option>Train</option>
+            <option>Truck</option>
+        </select>
+    </p>
+    <p id="weights"></p>
+    <p>Details:<span id="details"></span></p>
+    <input type="button" value="Book" onclick="display()">
+</body>
+</html>

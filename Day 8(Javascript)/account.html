@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var bal=0;
+        function loan() {
+            var amt=parseInt(document.getElementById('amt').value);
+            var open=parseInt(document.getElementById('open').value);
+                if(bal==0)
+            {
+                bal= open+amt;
+                document.getElementById("bal").innerHTML=bal;
+            }
+         else{
+            bal= bal+amt;
+            document.getElementById("bal").innerHTML=bal;
+         }
+        }
+        function deposit()
+        { var amt=parseInt(document.getElementById('amt').value);
+         var open=parseInt(document.getElementById('open').value);
+         if(bal==0)
+         {
+            bal= open+amt;
+            document.getElementById("bal").innerHTML=bal;
+         }
+         else{
+            bal= bal+amt;
+            document.getElementById("bal").innerHTML=bal;
+         }
+         
+        }
+        function withdrawal(){
+            var amt=parseInt(document.getElementById('amt').value);
+         var open=parseInt(document.getElementById('open').value);
+         
+         if(open<amt)
+         {
+            alert("Insufficent balance");
+         }
+         else if(bal==0)
+         {
+            bal= open-amt;
+            document.getElementById("bal").innerHTML=bal;
+         }
+         
+         else{
+            bal= bal-amt;
+            document.getElementById("bal").innerHTML=bal;
+         }
+        }
+    </script>
+</head>
+<body>
+    <h4>Accounts Details</h4>
+    <input type="button"  value="LOAN" onclick="loan()">
+    <input type="button"  value="DEPOSIT" onclick="deposit()">
+    <input type="button" value="WITHDRAWAL" onclick="withdrawal()">
+    <p>Opening Balance: <input type="number" id="open"></p>
+    <p>Balance:<span id="bal"></span></p>
+    <p> Amount:<input type="number" id="amt"></p>
+</body>
+</html>
